@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fig — Build Web</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== SLIDESHOW ===== -->
+  <div class="slideshow">
+
+    <!-- Navigation radio buttons (pure CSS state) -->
+    <input type="radio" name="slide" id="s1" checked />
+    <input type="radio" name="slide" id="s2" />
+    <input type="radio" name="slide" id="s3" />
+    <input type="radio" name="slide" id="s4" />
+    <input type="radio" name="slide" id="s5" />
+
+    <!-- Slides -->
+    <div class="slides">
+
+      <!-- Slide 1 — Title -->
+      <div class="slide slide-1">
+        <div class="slide-content">
+          <span class="tag">Introduction</span>
+          <h1>Building the Web</h1>
+          <p>A visual journey through modern <strong>HTML</strong> &amp; <strong>CSS</strong> — from structure to style.</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 — HTML -->
+      <div class="slide slide-2">
+        <div class="slide-content">
+          <span class="tag">HTML</span>
+          <h1>Structure &amp; Semantics</h1>
+          <p>HTML gives every page its skeleton — headings, paragraphs, images, links, and more. Semantic elements like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;main&gt;</code> make content accessible and meaningful.</p>
+          <div class="code-block">
+            <pre><code>&lt;header&gt;
+  &lt;h1&gt;Hello, World!&lt;/h1&gt;
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;p&gt;Welcome to my site.&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 — CSS -->
+      <div class="slide slide-3">
+        <div class="slide-content">
+          <span class="tag">CSS</span>
+          <h1>Style &amp; Layout</h1>
+          <p>CSS transforms raw HTML into beautiful interfaces. Flexbox, Grid, custom properties, and transitions give you full creative control.</p>
+          <div class="code-block">
+            <pre><code>:root {
+  --primary: #6c5ce7;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-family: "Inter", sans-serif;
+}</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4 — Responsive Design -->
+      <div class="slide slide-4">
+        <div class="slide-content">
+          <span class="tag">Responsive</span>
+          <h1>Responsive Design</h1>
+          <p>Media queries, fluid typography, and flexible layouts ensure your site looks perfect on every screen — from mobile phones to ultra-wide monitors.</p>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">📱</div>
+              <h3>Mobile First</h3>
+              <p>Design for small screens, then enhance.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🖥️</div>
+              <h3>Fluid Grids</h3>
+              <p>Flexible layouts that adapt smoothly.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🎨</div>
+              <h3>Media Queries</h3>
+              <p>Tailor styles to any viewport.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 5 — Thank You -->
+      <div class="slide slide-5">
+        <div class="slide-content">
+          <span class="tag">Fin</span>
+          <h1>Start Building!</h1>
+          <p>HTML &amp; CSS are the foundation of the web. Master them and you can create anything — from portfolios to full web apps.</p>
+          <a href="https://developer.mozilla.org/en-US/docs/Learn" class="cta-button" target="_blank" rel="noopener noreferrer">Learn More on MDN ↗</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Dot navigation -->
+    <div class="dots">
+      <label for="s1" class="dot"></label>
+      <label for="s2" class="dot"></label>
+      <label for="s3" class="dot"></label>
+      <label for="s4" class="dot"></label>
+      <label for="s5" class="dot"></label>
+    </div>
+
+    <!-- Arrow navigation -->
+    <div class="arrows">
+      <!-- Slide-specific prev/next labels -->
+      <!-- s1 active -->
+      <label for="s2" class="arrow next a1">&#10095;</label>
+
+      <!-- s2 active -->
+      <label for="s1" class="arrow prev a2">&#10094;</label>
+      <label for="s3" class="arrow next a2">&#10095;</label>
+
+      <!-- s3 active -->
+      <label for="s2" class="arrow prev a3">&#10094;</label>
+      <label for="s4" class="arrow next a3">&#10095;</label>
+
+      <!-- s4 active -->
+      <label for="s3" class="arrow prev a4">&#10094;</label>
+      <label for="s5" class="arrow next a4">&#10095;</label>
+
+      <!-- s5 active -->
+      <label for="s4" class="arrow prev a5">&#10094;</label>
+    </div>
+
+    <!-- Slide counter -->
+    <div class="counter">
+      <span class="counter-text c1">1 / 5</span>
+      <span class="counter-text c2">2 / 5</span>
+      <span class="counter-text c3">3 / 5</span>
+      <span class="counter-text c4">4 / 5</span>
+      <span class="counter-text c5">5 / 5</span>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,386 @@
+/* ============================================
+   Fig — Build Web  |  HTML & CSS Slideshow
+   Pure CSS slideshow (no JavaScript required)
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Fira+Code:wght@400;500&display=swap');
+
+/* ---------- Custom Properties ---------- */
+:root {
+  --bg:        #0f0f1a;
+  --surface:   #1a1a2e;
+  --card:      #25253d;
+  --border:    #35355a;
+  --text:      #e4e4f0;
+  --muted:     #9494b8;
+  --primary:   #6c5ce7;
+  --primary-l: #a29bfe;
+  --accent:    #00cec9;
+  --gradient:  linear-gradient(135deg, var(--primary), var(--accent));
+  --font:      'Inter', system-ui, sans-serif;
+  --mono:      'Fira Code', monospace;
+  --slide-transition: .6s cubic-bezier(.77,0,.18,1);
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+}
+
+/* ---------- Slideshow Container ---------- */
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Hide radios */
+.slideshow > input { display: none; }
+
+/* ---------- Slide Track ---------- */
+.slides {
+  display: flex;
+  width: 500%;            /* 5 slides */
+  height: 100%;
+  transition: transform var(--slide-transition);
+}
+
+/* Move track based on checked radio */
+#s1:checked ~ .slides { transform: translateX(0); }
+#s2:checked ~ .slides { transform: translateX(-20%); }
+#s3:checked ~ .slides { transform: translateX(-40%); }
+#s4:checked ~ .slides { transform: translateX(-60%); }
+#s5:checked ~ .slides { transform: translateX(-80%); }
+
+/* ---------- Individual Slide ---------- */
+.slide {
+  width: 20%;             /* 100% / 5 slides */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background blobs */
+.slide::before,
+.slide::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: .25;
+  pointer-events: none;
+}
+
+.slide::before {
+  width: 500px; height: 500px;
+  top: -100px; right: -100px;
+  background: var(--primary);
+}
+
+.slide::after {
+  width: 400px; height: 400px;
+  bottom: -80px; left: -80px;
+  background: var(--accent);
+}
+
+/* ---------- Slide Content ---------- */
+.slide-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  width: 100%;
+  animation: fadeUp .8s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Tag pill */
+.tag {
+  display: inline-block;
+  padding: .35em .9em;
+  border-radius: 999px;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  background: var(--gradient);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+/* Headings */
+.slide-content h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: .75rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.slide-content p {
+  font-size: clamp(.95rem, 1.8vw, 1.2rem);
+  line-height: 1.7;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
+.slide-content p strong {
+  color: var(--text);
+}
+
+/* Inline code */
+.slide-content code {
+  font-family: var(--mono);
+  background: var(--card);
+  padding: .15em .4em;
+  border-radius: 4px;
+  font-size: .9em;
+  color: var(--primary-l);
+}
+
+/* ---------- Code Block ---------- */
+.code-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+  margin-top: .5rem;
+}
+
+.code-block pre {
+  margin: 0;
+}
+
+.code-block code {
+  font-family: var(--mono);
+  font-size: .85rem;
+  line-height: 1.7;
+  color: var(--primary-l);
+  background: none;
+  padding: 0;
+}
+
+/* ---------- Features Grid (Slide 4) ---------- */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.feature-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+  transition: transform .25s ease, border-color .25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+
+.feature-card h3 {
+  font-size: .95rem;
+  font-weight: 700;
+  margin-bottom: .35rem;
+  color: var(--text);
+}
+
+.feature-card p {
+  font-size: .8rem;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+/* ---------- CTA Button (Slide 5) ---------- */
+.cta-button {
+  display: inline-block;
+  padding: .85em 2em;
+  border-radius: 999px;
+  background: var(--gradient);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-top: .5rem;
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+.cta-button:hover {
+  opacity: .88;
+  transform: translateY(-2px);
+}
+
+/* ---------- Dot Navigation ---------- */
+.dots {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: .6rem;
+  z-index: 10;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--border);
+  cursor: pointer;
+  transition: background .3s ease, transform .3s ease;
+}
+
+.dot:hover {
+  background: var(--muted);
+}
+
+/* Active dot */
+#s1:checked ~ .dots .dot:nth-child(1),
+#s2:checked ~ .dots .dot:nth-child(2),
+#s3:checked ~ .dots .dot:nth-child(3),
+#s4:checked ~ .dots .dot:nth-child(4),
+#s5:checked ~ .dots .dot:nth-child(5) {
+  background: var(--primary-l);
+  transform: scale(1.3);
+}
+
+/* ---------- Arrow Navigation ---------- */
+.arrows {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  display: none;              /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background .25s ease, color .25s ease;
+  user-select: none;
+  line-height: 48px;
+  text-align: center;
+}
+
+.arrow:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.arrow.prev { left: 1.5rem; }
+.arrow.next { right: 1.5rem; }
+
+/* Show correct arrows per slide */
+#s1:checked ~ .arrows .a1 { display: flex; }
+#s2:checked ~ .arrows .a2 { display: flex; }
+#s3:checked ~ .arrows .a3 { display: flex; }
+#s4:checked ~ .arrows .a4 { display: flex; }
+#s5:checked ~ .arrows .a5 { display: flex; }
+
+/* ---------- Slide Counter ---------- */
+.counter {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  z-index: 10;
+}
+
+.counter-text {
+  display: none;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: .06em;
+}
+
+#s1:checked ~ .counter .c1,
+#s2:checked ~ .counter .c2,
+#s3:checked ~ .counter .c3,
+#s4:checked ~ .counter .c4,
+#s5:checked ~ .counter .c5 {
+  display: inline;
+}
+
+/* ---------- Per-slide colour accents ---------- */
+.slide-1::before { background: var(--primary); }
+.slide-1::after  { background: var(--accent); }
+
+.slide-2::before { background: #e17055; }
+.slide-2::after  { background: #fdcb6e; }
+
+.slide-3::before { background: #6c5ce7; }
+.slide-3::after  { background: #a29bfe; }
+
+.slide-4::before { background: #00b894; }
+.slide-4::after  { background: #55efc4; }
+
+.slide-5::before { background: #fd79a8; }
+.slide-5::after  { background: #e84393; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .slide { padding: 1.25rem; }
+
+  .slide-content h1 {
+    font-size: 1.75rem;
+  }
+
+  .arrow {
+    width: 38px; height: 38px;
+    font-size: 1.2rem;
+    line-height: 38px;
+  }
+
+  .arrow.prev { left: .75rem; }
+  .arrow.next { right: .75rem; }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .code-block {
+    padding: 1rem;
+  }
+
+  .dots { bottom: 1.25rem; }
+}
