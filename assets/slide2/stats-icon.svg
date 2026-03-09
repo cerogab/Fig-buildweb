@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="streamline:interface-signal-graph-heart-line-beat-square-graph-stats" clip-path="url(#clip0_6_1477)">
+<path id="Vector" d="M0.892857 12.6429H4.80357C4.96824 12.641 5.12943 12.5953 5.27064 12.5106C5.41185 12.4259 5.52798 12.3051 5.60714 12.1607L8.82143 5.73214C8.90065 5.57209 9.02694 5.4401 9.18335 5.35392C9.33977 5.26773 9.51881 5.23147 9.69643 5.25C9.87334 5.26196 10.0422 5.32849 10.1797 5.44042C10.3172 5.55236 10.4167 5.70419 10.4643 5.875L14.4464 19.125C14.4987 19.3047 14.6061 19.4635 14.7535 19.5789C14.9009 19.6942 15.0808 19.7603 15.2679 19.7679C15.4431 19.762 15.6128 19.7048 15.7557 19.6031C15.8986 19.5015 16.0084 19.3601 16.0714 19.1964L18.5179 13.2143C18.5852 13.0465 18.701 12.9025 18.8505 12.8008C18.9999 12.699 19.1763 12.644 19.3571 12.6429H24.1071" stroke="var(--stroke-0, #726A4A)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_6_1477">
+<rect width="25" height="25" fill="white"/>
+</clipPath>
+</defs>
+</svg>

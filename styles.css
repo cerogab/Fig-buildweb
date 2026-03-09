@@ -617,3 +617,507 @@ html, body {
     margin: 0 auto;
   }
 }
+
+/* ============================================
+   SLIDE 2 — Home Screen (Figma Design)
+   ============================================ */
+
+/* Override slide-2 to match Figma light theme */
+.slide.slide-2 {
+  background: #fff;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.slide-2::before,
+.slide-2::after { display: none; }
+
+.home-page {
+  max-width: 430px;
+  width: 100%;
+  font-family: var(--fig-font);
+  animation: none;
+  padding-bottom: 80px;
+  position: relative;
+}
+
+/* ----- Status Bar ----- */
+.status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 21px 24px 19px;
+}
+
+.status-time {
+  font-family: 'SF Pro', 'Inter', sans-serif;
+  font-weight: 590;
+  font-size: 17px;
+  line-height: 22px;
+  color: #000;
+}
+
+.status-icons {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.status-icon-img {
+  height: 13px;
+  width: auto;
+}
+
+/* ----- Touch Hero Section ----- */
+.touch-hero {
+  background: #d5d4cb;
+  border-radius: 0 0 25px 25px;
+  padding: 0 25px 40px;
+}
+
+.hero-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  margin-bottom: 40px;
+}
+
+.avatar-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.avatar-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ring-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ring-pill {
+  position: relative;
+  background: #fff;
+  border-radius: 21px;
+  width: 43px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ring-pill img {
+  width: 27px;
+  height: 29px;
+  object-fit: contain;
+}
+
+.ring-dot {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4cd964;
+  border: 2px solid #fff;
+}
+
+.ring-add {
+  background: none;
+  border: none;
+}
+
+.ring-add img {
+  width: 44px;
+  height: 44px;
+}
+
+/* Hero body: text + hand */
+.hero-body {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 35px;
+  padding: 0 10px;
+  margin-bottom: 15px;
+}
+
+.hero-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tactile-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--fig-font);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.5;
+  color: #2a2620;
+  letter-spacing: -0.24px;
+}
+
+.touch-status-title {
+  font-family: var(--fig-font);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.5;
+  color: #2a2620;
+  letter-spacing: -0.4px;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: #2a2620;
+  background-clip: unset;
+}
+
+.hand-illustration {
+  width: 112px;
+  height: 145px;
+  flex-shrink: 0;
+}
+
+.hand-illustration img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Quick Relief Card */
+.quick-relief-card {
+  background: #fff;
+  border-radius: 25px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.relief-tag {
+  display: inline-block;
+  align-self: flex-start;
+  background: #dbeefb;
+  border-radius: 15px;
+  padding: 5px 15px;
+  font-family: var(--fig-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #2a2620;
+  letter-spacing: -0.15px;
+}
+
+.relief-text {
+  font-family: var(--fig-font);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #000 !important;
+  letter-spacing: -0.22px;
+  margin: 0 !important;
+}
+
+/* ----- Tactile Flow Section ----- */
+.tactile-flow-section {
+  padding: 40px 25px 0;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-family: var(--fig-font);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.5;
+  color: #2a2620;
+  letter-spacing: -0.24px;
+}
+
+.section-arrow {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tab pills */
+.flow-tabs {
+  background: #f7f6ee;
+  border-radius: 30px;
+  padding: 5px;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.flow-tab {
+  flex: 1;
+  text-align: center;
+  padding: 5px 25px;
+  border-radius: 30px;
+  font-family: var(--fig-font);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #b5ad8e;
+  letter-spacing: -0.13px;
+  cursor: pointer;
+}
+
+.flow-tab.active {
+  background: #fff;
+  color: #2a2620;
+}
+
+.avg-badge-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.avg-badge {
+  background: #f9e7a7;
+  border-radius: 30px;
+  padding: 5px 15px;
+  font-family: var(--fig-font);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #000;
+  letter-spacing: -0.13px;
+}
+
+/* Dot heat grid */
+.dot-grid {
+  display: grid;
+  grid-template-columns: repeat(14, 13.5px);
+  gap: 3px 7px;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.hd {
+  width: 13.5px;
+  height: 13.5px;
+  border-radius: 50%;
+  display: block;
+}
+
+.hd-empty {
+  background: transparent;
+}
+
+.hd-l1 {
+  background: #f0ead8;
+}
+
+.hd-l2 {
+  background: #e6dfc5;
+}
+
+.hd-l3 {
+  background: #d5d4cb;
+}
+
+.hd-l4 {
+  background: #c4b87a;
+}
+
+/* Time labels */
+.flow-times {
+  display: flex;
+  gap: 17px;
+  padding: 0 10px;
+  font-family: var(--fig-font);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #8a8370;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.flow-times .time-active {
+  color: #2a2620;
+}
+
+/* ----- Patterns Card ----- */
+.patterns-card {
+  background: #fdfcf8;
+  border-radius: 25px;
+  padding: 30px 20px;
+  margin: 30px 25px 0;
+}
+
+.patterns-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.patterns-label {
+  font-family: var(--fig-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #726a4a;
+  letter-spacing: -0.18px;
+}
+
+.patterns-body {
+  font-family: var(--fig-font);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #000 !important;
+  margin: 0 !important;
+}
+
+/* ----- Highlights Section ----- */
+.highlights-section {
+  padding: 40px 25px 0;
+}
+
+.highlights-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+}
+
+.highlights-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.highlight-card {
+  flex: 0 0 auto;
+  width: 196px;
+  border-radius: 25px;
+  padding: 30px 20px;
+  scroll-snap-align: start;
+}
+
+.hl-blue  { background: #dbeefb; }
+.hl-cream { background: #d5d4cb; }
+.hl-gold  { background: #f5e29c; }
+.hl-tan   { background: #f0eadb; }
+
+.hl-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #fff;
+  border-radius: 30px;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+}
+
+.hl-tag-pill span {
+  font-family: var(--fig-font);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #3a3525;
+  letter-spacing: -0.13px;
+}
+
+.highlight-card h4 {
+  font-family: var(--fig-font);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.2;
+  color: #000;
+  letter-spacing: -0.24px;
+  margin-bottom: 10px;
+}
+
+.highlight-card p {
+  font-family: var(--fig-font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #000 !important;
+  letter-spacing: -0.18px;
+  margin: 0 !important;
+}
+
+/* ----- Bottom Nav Bar ----- */
+.bottom-nav {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: rgba(247,247,247,0.85);
+  border-radius: 296px;
+  padding: 0;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+  z-index: 20;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5px;
+  padding: 6px 8px 7px;
+  width: 102px;
+  position: relative;
+}
+
+.nav-item span {
+  font-family: var(--fig-font);
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 12px;
+  color: #3a3525;
+  letter-spacing: -0.1px;
+}
+
+.nav-active {
+  background: #8a8370;
+  border-radius: 100px;
+}
+
+.nav-active span {
+  color: #fff;
+}
+
+/* ----- Home page responsive ----- */
+@media (min-width: 641px) {
+  .home-page {
+    margin: 0 auto;
+  }
+}

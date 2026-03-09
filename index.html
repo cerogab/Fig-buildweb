@@ -144,20 +144,161 @@
         </div>
       </div>
 
-      <!-- Slide 2 — HTML -->
+      <!-- Slide 2 — Home (Figma) -->
       <div class="slide slide-2">
-        <div class="slide-content">
-          <span class="tag">HTML</span>
-          <h1>Structure &amp; Semantics</h1>
-          <p>HTML gives every page its skeleton — headings, paragraphs, images, links, and more. Semantic elements like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;main&gt;</code> make content accessible and meaningful.</p>
-          <div class="code-block">
-            <pre><code>&lt;header&gt;
-  &lt;h1&gt;Hello, World!&lt;/h1&gt;
-&lt;/header&gt;
-&lt;main&gt;
-  &lt;p&gt;Welcome to my site.&lt;/p&gt;
-&lt;/main&gt;</code></pre>
+        <div class="slide-content home-page">
+
+          <!-- Status Bar -->
+          <div class="status-bar">
+            <span class="status-time">9:41</span>
+            <div class="status-icons">
+              <img src="assets/slide2/cellular.svg" alt="" class="status-icon-img" />
+              <img src="assets/slide2/wifi.svg" alt="" class="status-icon-img" />
+              <img src="assets/slide2/battery.svg" alt="" class="status-icon-img" />
+            </div>
           </div>
+
+          <!-- Touch Balance Hero -->
+          <div class="touch-hero">
+            <!-- Top row: avatar + ring icons -->
+            <div class="hero-top-row">
+              <div class="avatar-circle">
+                <img src="assets/slide2/profile2.png" alt="Profile" />
+              </div>
+              <div class="ring-icons">
+                <div class="ring-pill">
+                  <img src="assets/slide2/ring1.png" alt="Ring" />
+                  <span class="ring-dot"></span>
+                </div>
+                <div class="ring-pill">
+                  <img src="assets/slide2/ring2.png" alt="Ring" />
+                  <span class="ring-dot"></span>
+                </div>
+                <div class="ring-pill ring-add">
+                  <img src="assets/slide2/plus-btn.svg" alt="Add" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Hand illustration + status -->
+            <div class="hero-body">
+              <div class="hero-text-col">
+                <div class="tactile-label">
+                  <span>Tactile Status</span>
+                  <img src="assets/slide2/info.svg" alt="" width="25" height="25" />
+                </div>
+                <h2 class="touch-status-title">Touch Starved</h2>
+              </div>
+              <div class="hand-illustration">
+                <img src="assets/slide2/hand.svg" alt="Hand" />
+              </div>
+            </div>
+
+            <!-- Quick Relief Card -->
+            <div class="quick-relief-card">
+              <span class="relief-tag">Quick Relief</span>
+              <p class="relief-text">A simple rub of your hands can help you feel grounded again!</p>
+            </div>
+          </div>
+
+          <!-- Tactile Flow Section -->
+          <div class="tactile-flow-section">
+            <div class="section-header">
+              <h3 class="section-title">Tactile Flow</h3>
+              <button class="section-arrow" aria-label="View more">
+                <img src="assets/slide2/arrow-right.svg" alt="" width="16" height="16" style="transform:rotate(180deg)" />
+              </button>
+            </div>
+
+            <!-- Tab pills -->
+            <div class="flow-tabs">
+              <div class="flow-tab active">Today</div>
+              <div class="flow-tab">Weekly</div>
+              <div class="flow-tab">Monthly</div>
+            </div>
+
+            <!-- Average badge -->
+            <div class="avg-badge-row">
+              <span class="avg-badge">Average: Low</span>
+            </div>
+
+            <!-- Dot heat grid (CSS circles) -->
+            <div class="dot-grid">
+              <!-- Row 1: 2 dots -->
+              <span class="hd hd-l3"></span><span class="hd hd-l1"></span><span class="hd hd-empty"></span><span class="hd hd-empty"></span><span class="hd hd-empty"></span><span class="hd hd-empty"></span><span class="hd hd-empty"></span><span class="hd hd-empty"></span><span class="hd hd-empty"></span><span class="hd hd-empty"></span><span class="hd hd-empty"></span><span class="hd hd-empty"></span><span class="hd hd-empty"></span><span class="hd hd-empty"></span>
+              <!-- Row 2: scattered -->
+              <span class="hd hd-l2"></span><span class="hd hd-l1"></span><span class="hd hd-empty"></span><span class="hd hd-empty"></span><span class="hd hd-l2"></span><span class="hd hd-empty"></span><span class="hd hd-l1"></span><span class="hd hd-l2"></span><span class="hd hd-empty"></span><span class="hd hd-empty"></span><span class="hd hd-l3"></span><span class="hd hd-l1"></span><span class="hd hd-empty"></span><span class="hd hd-empty"></span>
+              <!-- Row 3: more filled -->
+              <span class="hd hd-l2"></span><span class="hd hd-l1"></span><span class="hd hd-l1"></span><span class="hd hd-l2"></span><span class="hd hd-l3"></span><span class="hd hd-l1"></span><span class="hd hd-l2"></span><span class="hd hd-l1"></span><span class="hd hd-l3"></span><span class="hd hd-l1"></span><span class="hd hd-l4"></span><span class="hd hd-l2"></span><span class="hd hd-empty"></span><span class="hd hd-empty"></span>
+              <!-- Row 4: dense -->
+              <span class="hd hd-l3"></span><span class="hd hd-l2"></span><span class="hd hd-l1"></span><span class="hd hd-l2"></span><span class="hd hd-l3"></span><span class="hd hd-l1"></span><span class="hd hd-l2"></span><span class="hd hd-l1"></span><span class="hd hd-l4"></span><span class="hd hd-l1"></span><span class="hd hd-l3"></span><span class="hd hd-l2"></span><span class="hd hd-l4"></span><span class="hd hd-l1"></span>
+              <!-- Row 5: full -->
+              <span class="hd hd-l2"></span><span class="hd hd-l1"></span><span class="hd hd-l2"></span><span class="hd hd-l1"></span><span class="hd hd-l3"></span><span class="hd hd-l2"></span><span class="hd hd-l1"></span><span class="hd hd-l2"></span><span class="hd hd-l4"></span><span class="hd hd-l1"></span><span class="hd hd-l3"></span><span class="hd hd-l2"></span><span class="hd hd-l4"></span><span class="hd hd-l1"></span>
+            </div>
+
+            <!-- Time labels -->
+            <div class="flow-times">
+              <span>10am</span><span>11am</span><span>12pm</span><span>1pm</span><span>2pm</span><span class="time-active">3pm</span><span>4pm</span>
+            </div>
+          </div>
+
+          <!-- Your Patterns -->
+          <div class="patterns-card">
+            <div class="patterns-header">
+              <img src="assets/slide2/stats-icon.svg" alt="" width="25" height="25" />
+              <span class="patterns-label">Your Patterns</span>
+            </div>
+            <p class="patterns-body">When you transitioned from screens to touching a warm mug, your stress dropped by 18%.</p>
+          </div>
+
+          <!-- Tactile Highlights -->
+          <div class="highlights-section">
+            <div class="section-header">
+              <h3 class="section-title">Tactile Highlights</h3>
+              <button class="section-arrow" aria-label="View more">
+                <img src="assets/slide2/arrow-right.svg" alt="" width="16" height="16" style="transform:rotate(180deg)" />
+              </button>
+            </div>
+            <div class="highlights-scroll">
+              <div class="highlight-card hl-blue">
+                <div class="hl-tag-pill"><img src="assets/slide2/selfsoothe.svg" alt="" width="12" height="12" /><span>Self-soothe</span></div>
+                <h4>Comfort Pro</h4>
+                <p>You held your own hand for 45m this week.</p>
+              </div>
+              <div class="highlight-card hl-cream">
+                <div class="hl-tag-pill"><img src="assets/slide2/bodyscan.svg" alt="" width="12" height="12" /><span>Object</span></div>
+                <h4>Digital Die-Hard</h4>
+                <p>Screen glass was your #1 texture at the time.</p>
+              </div>
+              <div class="highlight-card hl-gold">
+                <div class="hl-tag-pill"><img src="assets/slide2/heartrate.svg" alt="" width="16" height="16" /><span>Pulse</span></div>
+                <h4>Fur-Fanatic</h4>
+                <p>Soft fur was your top feel today.</p>
+              </div>
+              <div class="highlight-card hl-tan">
+                <div class="hl-tag-pill"><img src="assets/slide2/nature.svg" alt="" width="16" height="16" /><span>Nature</span></div>
+                <h4>Earth Explorer</h4>
+                <p>Rough bark &amp; leaves were winners!</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Nav Bar -->
+          <nav class="bottom-nav">
+            <div class="nav-item nav-active">
+              <img src="assets/slide2/home-icon.svg" alt="" width="20" height="20" />
+              <span>Home</span>
+            </div>
+            <div class="nav-item">
+              <img src="assets/slide2/hand-pointing.svg" alt="" width="24" height="24" />
+              <span>Touch Log</span>
+            </div>
+            <div class="nav-item">
+              <img src="assets/slide2/settings-icon.svg" alt="" width="20" height="20" />
+              <span>Control</span>
+            </div>
+          </nav>
+
         </div>
       </div>
 
