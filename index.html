@@ -297,23 +297,177 @@
         </div>
       </div>
 
-      <!-- Slide 3 — CSS -->
+      <!-- Slide 3 — Control Centre (Figma) -->
       <div class="slide slide-3">
-        <div class="slide-content">
-          <span class="tag">CSS</span>
-          <h1>Style &amp; Layout</h1>
-          <p>CSS transforms raw HTML into beautiful interfaces. Flexbox, Grid, custom properties, and transitions give you full creative control.</p>
-          <div class="code-block">
-            <pre><code>:root {
-  --primary: #6c5ce7;
-}
+        <div class="slide-content control-page">
 
-body {
-  display: grid;
-  place-items: center;
-  font-family: "Inter", sans-serif;
-}</code></pre>
+          <!-- Status Bar -->
+          <div class="status-bar">
+            <span class="status-time">9:41</span>
           </div>
+
+          <!-- Header -->
+          <div class="ctrl-header">
+            <h1 class="ctrl-title">Control Centre</h1>
+            <button class="ctrl-more-btn" aria-label="More options">
+              <img src="assets/slide3/more-icon.svg" alt="" width="22" height="22" />
+            </button>
+          </div>
+
+          <!-- Profile Section -->
+          <div class="ctrl-profile">
+            <div class="ctrl-avatar">
+              <img src="assets/slide3/profile-photo2.png" alt="Maya Doe" class="ctrl-avatar-img" />
+            </div>
+            <div class="ctrl-profile-info">
+              <h2 class="ctrl-profile-name">Maya Doe</h2>
+              <div class="ctrl-profile-status">
+                <span class="ctrl-green-dot"></span>
+                <span class="ctrl-status-text">Sensing active • 2 devices connected</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Devices Card -->
+          <div class="ctrl-card">
+            <div class="ctrl-card-row">
+              <span class="ctrl-card-label">Devices</span>
+              <div class="ctrl-devices-icons">
+                <div class="ctrl-device-pill">
+                  <img src="assets/slide3/ring-device1.png" alt="Ring 1" />
+                  <span class="ctrl-device-dot"></span>
+                </div>
+                <div class="ctrl-device-pill">
+                  <img src="assets/slide3/ring-device2.png" alt="Ring 2" />
+                  <span class="ctrl-device-dot"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Touch Track Card -->
+          <div class="ctrl-card">
+            <div class="ctrl-card-row">
+              <span class="ctrl-card-label">Touch Track</span>
+              <img src="assets/slide3/chevron-right.svg" alt="" class="ctrl-chevron" />
+            </div>
+            <div class="ctrl-track-icons">
+              <div class="ctrl-track-item">
+                <div class="ctrl-track-btn active">
+                  <img src="assets/slide3/icon-selfsoothe.svg" alt="" />
+                </div>
+                <span class="ctrl-track-label">Self-soothe</span>
+              </div>
+              <div class="ctrl-track-item">
+                <div class="ctrl-track-btn active">
+                  <img src="assets/slide3/icon-pulse.svg" alt="" />
+                </div>
+                <span class="ctrl-track-label">Pusle</span>
+              </div>
+              <div class="ctrl-track-item">
+                <div class="ctrl-track-btn active">
+                  <img src="assets/slide3/icon-object.svg" alt="" />
+                </div>
+                <span class="ctrl-track-label">Object</span>
+              </div>
+              <div class="ctrl-track-item">
+                <div class="ctrl-track-btn disabled">
+                  <img src="assets/slide3/icon-nature.svg" alt="" />
+                </div>
+                <span class="ctrl-track-label">Nature</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Settings Section -->
+          <p class="ctrl-settings-label">Settings</p>
+
+          <!-- Setting: Activity Logging -->
+          <div class="ctrl-card">
+            <div class="ctrl-card-row">
+              <div class="ctrl-setting-left">
+                <img src="assets/slide3/icon-hand.svg" alt="" class="ctrl-setting-icon" />
+                <span class="ctrl-setting-text">Activity Logging</span>
+              </div>
+              <div class="ctrl-toggle on">
+                <span class="ctrl-toggle-knob"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Setting: Smart Nudge -->
+          <div class="ctrl-card">
+            <div class="ctrl-card-row">
+              <div class="ctrl-setting-left">
+                <img src="assets/slide3/icon-notification.svg" alt="" class="ctrl-setting-icon" />
+                <span class="ctrl-setting-text">Smart Nudge</span>
+              </div>
+              <div class="ctrl-toggle on">
+                <span class="ctrl-toggle-knob"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Setting: Family Wellbeing -->
+          <div class="ctrl-card">
+            <div class="ctrl-card-row">
+              <div class="ctrl-setting-left">
+                <img src="assets/slide3/icon-family.svg" alt="" class="ctrl-setting-icon" />
+                <span class="ctrl-setting-text">Family Wellbeing</span>
+              </div>
+              <img src="assets/slide3/chevron-right2.svg" alt="" class="ctrl-chevron" />
+            </div>
+          </div>
+
+          <!-- Setting: Manage My Data -->
+          <div class="ctrl-card">
+            <div class="ctrl-card-row">
+              <div class="ctrl-setting-left">
+                <img src="assets/slide3/icon-data.svg" alt="" class="ctrl-setting-icon" />
+                <span class="ctrl-setting-text">Manage My Data</span>
+              </div>
+              <img src="assets/slide3/chevron-right3.svg" alt="" class="ctrl-chevron" />
+            </div>
+          </div>
+
+          <!-- Setting: Help & Support -->
+          <div class="ctrl-card">
+            <div class="ctrl-card-row">
+              <div class="ctrl-setting-left">
+                <img src="assets/slide3/icon-help.svg" alt="" class="ctrl-setting-icon" />
+                <span class="ctrl-setting-text">Help &amp; Support</span>
+              </div>
+              <img src="assets/slide3/chevron-right3.svg" alt="" class="ctrl-chevron" />
+            </div>
+          </div>
+
+          <!-- Setting: Privacy & Ethics -->
+          <div class="ctrl-card">
+            <div class="ctrl-card-row">
+              <div class="ctrl-setting-left">
+                <img src="assets/slide3/icon-privacy.svg" alt="" class="ctrl-setting-icon" />
+                <span class="ctrl-setting-text">Privacy &amp; Ethics</span>
+              </div>
+              <img src="assets/slide3/chevron-right3.svg" alt="" class="ctrl-chevron" />
+            </div>
+          </div>
+
+          <!-- Bottom Nav -->
+          <nav class="bottom-nav">
+            <div class="nav-item">
+              <img src="assets/slide3/home-icon.svg" alt="" width="20" height="20" />
+              <span>Home</span>
+            </div>
+            <div class="nav-item">
+              <img src="assets/slide3/hand-pointing.svg" alt="" width="24" height="24" />
+              <span>Touch Log</span>
+            </div>
+            <div class="nav-item nav-active">
+              <img src="assets/slide3/settings-icon.svg" alt="" width="20" height="20" />
+              <span>Control</span>
+            </div>
+          </nav>
+
         </div>
       </div>
 
