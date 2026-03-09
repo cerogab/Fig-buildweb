@@ -454,10 +454,10 @@ html, body {
   font-weight: 700;
   font-size: 28px;
   line-height: 34px;
-  color: var(--fig-text);
+  color: #C49A6C;
   background: none;
   -webkit-background-clip: unset;
-  -webkit-text-fill-color: var(--fig-text);
+  -webkit-text-fill-color: #C49A6C;
   background-clip: unset;
 }
 
@@ -1167,10 +1167,10 @@ html, body {
   font-weight: 700;
   font-size: 28px;
   line-height: 34px;
-  color: #000;
+  color: #C49A6C;
   background: none;
   -webkit-background-clip: unset;
-  -webkit-text-fill-color: #000;
+  -webkit-text-fill-color: #C49A6C;
   background-clip: unset;
 }
 
@@ -1484,10 +1484,10 @@ html, body {
   font-weight: 700;
   font-size: 28px;
   line-height: 34px;
-  color: #000;
+  color: #C49A6C;
   background: none;
   -webkit-background-clip: unset;
-  -webkit-text-fill-color: #000;
+  -webkit-text-fill-color: #C49A6C;
   background-clip: unset;
 }
 
@@ -1622,10 +1622,10 @@ html, body {
   font-weight: 700;
   font-size: 28px;
   line-height: 34px;
-  color: #2a2620;
+  color: #C49A6C;
   background: none;
   -webkit-background-clip: unset;
-  -webkit-text-fill-color: #2a2620;
+  -webkit-text-fill-color: #C49A6C;
   background-clip: unset;
 }
 
@@ -1943,11 +1943,11 @@ html, body {
   font-weight: 700;
   font-size: 28px;
   line-height: 34px;
-  color: #3d3830;
+  color: #C49A6C;
   margin: 8px 0 16px;
   background: none;
   -webkit-background-clip: unset;
-  -webkit-text-fill-color: #3d3830;
+  -webkit-text-fill-color: #C49A6C;
   background-clip: unset;
 }
 
