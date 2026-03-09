@@ -1131,7 +1131,6 @@ html, body {
 
 /* ----- Pair Popup (Slide 2) ----- */
 .pair-overlay {
-  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -1139,12 +1138,17 @@ html, body {
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
   z-index: 50;
+  display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
 }
 
 .pair-overlay.active {
-  display: flex;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .pair-popup {
@@ -1158,6 +1162,13 @@ html, body {
   align-items: center;
   text-align: center;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+.pair-overlay.active .pair-popup {
+  transform: translateY(0);
+}
 }
 
 .pair-close {
