@@ -1934,6 +1934,7 @@ html, body {
   animation: none;
   padding: 0 24px 40px;
   position: relative;
+  background: linear-gradient(to bottom, #f0efe3, rgba(247,246,238,0) 57%);
 }
 
 /* ----- Title ----- */
@@ -1952,8 +1953,8 @@ html, body {
 
 /* ----- Tab pills ----- */
 .ins-tabs {
-  background: #fdfcf8;
-  border-radius: 30px;
+  background: #e8e7db;
+  border-radius: 16px;
   padding: 5px;
   display: flex;
   gap: 5px;
@@ -1964,7 +1965,7 @@ html, body {
   flex: 1;
   text-align: center;
   padding: 5px 25px;
-  border-radius: 30px;
+  border-radius: 14px;
   font-family: var(--fig-font);
   font-weight: 500;
   font-size: 12px;
@@ -1975,7 +1976,7 @@ html, body {
 }
 
 .ins-tab.active {
-  background: #f0eadb;
+  background: #f7f6ee;
   color: #2a2620;
 }
 
@@ -1990,6 +1991,7 @@ html, body {
 /* Wedge containers */
 .ins-wedge {
   position: absolute;
+  overflow: hidden;
 }
 
 .ins-wedge-img {
@@ -2006,20 +2008,51 @@ html, body {
   height: 100%;
 }
 
-/* Pulse — large left slice */
+/* Photo overlays inside wedges */
+.ins-wedge-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: soft-light;
+  overflow: hidden;
+}
+
+.ins-photo-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+}
+
+.ins-photo-tint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Human & Animal — large left slice */
 .ins-wedge-pulse {
   left: 10px;
   top: 0;
   width: 159px;
   height: 319px;
+  border-radius: 159px 0 0 159px;
 }
 
-/* Self-Sooth — top-right */
+/* Self-Soothing — top-right */
 .ins-wedge-sooth {
   left: 173px;
   top: 0;
   width: 159px;
   height: 152px;
+  border-radius: 0 159px 0 0;
 }
 
 /* Objects — right */
@@ -2046,6 +2079,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  z-index: 2;
 }
 
 .ins-wedge-label.light .ins-pct {
@@ -2129,8 +2163,8 @@ html, body {
 
 .ins-card-top {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .ins-card.expanded .ins-card-header {
@@ -2139,19 +2173,21 @@ html, body {
   padding: 18px 24px;
 }
 
-.ins-card-icon-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .ins-card-name {
   font-family: var(--fig-font);
-  font-weight: 500;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.176px;
   color: #3a3525;
+}
+
+.ins-card-sub {
+  font-family: var(--fig-font);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #8a846e;
 }
 
 .ins-chevron {
@@ -2167,7 +2203,7 @@ html, body {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.4;
-  color: #000 !important;
+  color: #726a4a !important;
   margin: 0 !important;
 }
 
