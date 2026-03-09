@@ -3,7 +3,7 @@
    Pure CSS slideshow (no JavaScript required)
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Fira+Code:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fustat:wght@400;600;700&family=Inter:wght@400;600;700;900&family=Fira+Code:wght@400;500&display=swap');
 
 /* ---------- Custom Properties ---------- */
 :root {
@@ -20,6 +20,16 @@
   --font:      'Inter', system-ui, sans-serif;
   --mono:      'Fira Code', monospace;
   --slide-transition: .6s cubic-bezier(.77,0,.18,1);
+
+  /* Figma Privacy page tokens */
+  --fig-bg:      #f5f4f0;
+  --fig-text:    #2a2620;
+  --fig-muted:   #5e5849;
+  --fig-font:    'Fustat', sans-serif;
+  --fig-card-bg: linear-gradient(154deg, rgba(253,252,248,0.88) 6%, rgba(250,250,250,0.85) 94%);
+  --fig-card-border: rgba(255,255,255,0.5);
+  --fig-card-shadow: 0 4px 24px rgba(0,0,0,0.04);
+  --fig-divider: rgba(0,0,0,0.04);
 }
 
 /* ---------- Reset ---------- */
@@ -342,8 +352,9 @@ html, body {
 }
 
 /* ---------- Per-slide colour accents ---------- */
-.slide-1::before { background: var(--primary); }
-.slide-1::after  { background: var(--accent); }
+/* Slide 1: Figma Privacy page — no blobs */
+.slide-1::before,
+.slide-1::after { display: none; }
 
 .slide-2::before { background: #e17055; }
 .slide-2::after  { background: #fdcb6e; }
@@ -383,4 +394,226 @@ html, body {
   }
 
   .dots { bottom: 1.25rem; }
+}
+
+/* ============================================
+   SLIDE 1 — Privacy & Trust (Figma Design)
+   ============================================ */
+
+/* Override slide-1 to match Figma light theme */
+.slide.slide-1 {
+  background: var(--fig-bg);
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.privacy-page {
+  max-width: 430px;
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 80px;
+  font-family: var(--fig-font);
+  animation: none;
+}
+
+/* ----- Header ----- */
+.privacy-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  padding-top: 36px;
+}
+
+.back-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.45);
+  background: rgba(253,252,248,0.75);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.privacy-title {
+  font-family: var(--fig-font);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  color: var(--fig-text);
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: var(--fig-text);
+  background-clip: unset;
+}
+
+/* ----- Subtitle ----- */
+.privacy-subtitle {
+  font-family: var(--fig-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--fig-muted) !important;
+  margin-bottom: 24px;
+  padding-left: 48px;
+}
+
+/* ----- Cards container ----- */
+.privacy-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* ----- Card ----- */
+.privacy-card {
+  background: var(--fig-card-bg);
+  border: 1px solid var(--fig-card-border);
+  border-radius: 20px;
+  box-shadow: var(--fig-card-shadow);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Glass inner highlight */
+.privacy-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
+  pointer-events: none;
+}
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px 20px 0;
+}
+
+/* Icon containers */
+.card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-icon.icon-blue {
+  background: #f0f8ff;
+  border: 1px solid rgba(94,146,178,0.2);
+}
+
+.card-icon.icon-warm {
+  background: #faf7f0;
+  border: 1px solid rgba(213,202,161,0.3);
+}
+
+.card-icon.icon-steel {
+  background: rgba(94,146,178,0.06);
+  border: 1px solid rgba(94,146,178,0.15);
+}
+
+.card-icon.icon-red {
+  background: #fef5f3;
+  border: 1px solid rgba(220,120,120,0.2);
+}
+
+.card-title {
+  font-family: var(--fig-font);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--fig-text);
+  padding-top: 5.5px;
+}
+
+/* ----- Bullet points list ----- */
+.card-points {
+  list-style: none;
+  padding: 12px 20px 20px;
+  margin: 0;
+}
+
+.card-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid var(--fig-divider);
+}
+
+.point-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.card-points li p {
+  font-family: var(--fig-font);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--fig-muted) !important;
+  margin: 0 !important;
+}
+
+/* ----- Promise banner ----- */
+.promise-banner {
+  background: #f0f8ff;
+  border: 1px solid rgba(187,221,244,0.3);
+  border-radius: 16px;
+  padding: 21px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.promise-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.promise-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.promise-label {
+  font-family: var(--fig-font);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #3a6280 !important;
+  margin: 0 !important;
+}
+
+.promise-body {
+  font-family: var(--fig-font);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+  color: #3a6280 !important;
+  margin: 0 !important;
+}
+
+/* ----- Privacy page responsive ----- */
+@media (min-width: 641px) {
+  .privacy-page {
+    margin: 0 auto;
+  }
 }

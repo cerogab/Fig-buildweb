@@ -1,0 +1,18 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="PointIcon" clip-path="url(#clip0_33_54)">
+<path id="Vector" d="M7 5.83333C6.69058 5.83333 6.39383 5.95625 6.17504 6.17504C5.95625 6.39383 5.83333 6.69058 5.83333 7C5.83333 7.595 5.775 8.46417 5.68167 9.33333" stroke="var(--stroke-0, #8A8370)" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M8.16667 7.65333C8.16667 9.04167 8.16667 11.375 7.58333 12.8333" stroke="var(--stroke-0, #8A8370)" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M10.0858 12.2617C10.1558 11.9117 10.3367 10.92 10.3775 10.5" stroke="var(--stroke-0, #8A8370)" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M1.16667 7C1.16667 5.77569 1.55188 4.58241 2.26775 3.58919C2.98362 2.59597 3.99385 1.85318 5.15534 1.46601C6.31683 1.07885 7.57069 1.06695 8.73931 1.432C9.90794 1.79706 10.9321 2.52055 11.6667 3.5" stroke="var(--stroke-0, #8A8370)" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M1.16667 9.33333H1.1725" stroke="var(--stroke-0, #8A8370)" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M12.7167 9.33333C12.8333 8.16667 12.7931 6.21017 12.7167 5.83333" stroke="var(--stroke-0, #8A8370)" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_7" d="M2.91667 11.375C3.20833 10.5 3.5 8.75 3.5 7C3.49941 6.60267 3.56648 6.20815 3.69833 5.83333" stroke="var(--stroke-0, #8A8370)" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_8" d="M5.04583 12.8333C5.16833 12.4483 5.30833 12.0633 5.37833 11.6667" stroke="var(--stroke-0, #8A8370)" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_9" d="M5.25 3.96667C5.78223 3.65938 6.38599 3.49766 7.00056 3.49776C7.61513 3.49785 8.21884 3.65977 8.75097 3.96723C9.28311 4.27468 9.7249 4.71683 10.0319 5.24921C10.339 5.78159 10.5004 6.38543 10.5 7V8.16667" stroke="var(--stroke-0, #8A8370)" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_33_54">
+<rect width="14" height="14" fill="white"/>
+</clipPath>
+</defs>
+</svg>
