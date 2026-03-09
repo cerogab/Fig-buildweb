@@ -17,6 +17,7 @@
     <input type="radio" name="slide" id="s3" />
     <input type="radio" name="slide" id="s4" />
     <input type="radio" name="slide" id="s5" />
+    <input type="radio" name="slide" id="s6" />
 
     <!-- Slides -->
     <div class="slides">
@@ -707,6 +708,125 @@
         </div>
       </div>
 
+      <!-- Slide 6 — Touch Insight (Figma) -->
+      <div class="slide slide-6">
+        <div class="slide-content insight-page">
+
+          <!-- Status Bar -->
+          <div class="status-bar">
+            <span class="status-time">9:41</span>
+          </div>
+
+          <!-- Title -->
+          <h1 class="ins-title">Touch Insight</h1>
+
+          <!-- Tab Pills -->
+          <div class="ins-tabs">
+            <div class="ins-tab active">Today</div>
+            <div class="ins-tab">Weekly</div>
+            <div class="ins-tab">Monthly</div>
+          </div>
+
+          <!-- Pie Chart -->
+          <div class="ins-chart">
+            <!-- Pulse 50% — large left wedge (dark blue) -->
+            <div class="ins-wedge ins-wedge-pulse">
+              <img src="assets/slide6/ellipse65.svg" alt="" class="ins-wedge-img" />
+              <img src="assets/slide6/mask-group.svg" alt="" class="ins-wedge-overlay" />
+              <div class="ins-wedge-label light">
+                <span class="ins-pct">50%</span>
+                <span class="ins-cat">Pulse</span>
+              </div>
+            </div>
+            <!-- Self-Sooth 25% — top-right wedge (medium blue) -->
+            <div class="ins-wedge ins-wedge-sooth">
+              <img src="assets/slide6/ellipse66.svg" alt="" class="ins-wedge-img" />
+              <div class="ins-wedge-label light">
+                <span class="ins-pct">25%</span>
+                <span class="ins-cat">Self-Sooth</span>
+              </div>
+            </div>
+            <!-- Objects 10% — right wedge (light blue) -->
+            <div class="ins-wedge ins-wedge-objects">
+              <img src="assets/slide6/ellipse67.svg" alt="" class="ins-wedge-img" />
+              <div class="ins-wedge-label dark">
+                <span class="ins-pct">10%</span>
+                <span class="ins-cat">Objects</span>
+              </div>
+            </div>
+            <!-- Nature 15% — bottom wedge -->
+            <div class="ins-wedge ins-wedge-nature">
+              <img src="assets/slide6/ellipse68.svg" alt="" class="ins-wedge-img" />
+              <div class="ins-wedge-label dark">
+                <span class="ins-pct">15%</span>
+                <span class="ins-cat">Nature</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Insight Cards -->
+          <div class="ins-cards">
+
+            <!-- Self-soothe — expanded -->
+            <div class="ins-card expanded">
+              <div class="ins-card-header">
+                <div class="ins-card-top">
+                  <div class="ins-card-icon-wrap">
+                    <img src="assets/slide6/icon-selfsoothe.svg" alt="" width="16" height="16" />
+                  </div>
+                  <span class="ins-card-name">Self-soothe</span>
+                </div>
+                <img src="assets/slide6/chevron-down.svg" alt="" class="ins-chevron" width="9" height="5" />
+              </div>
+              <div class="ins-card-body">
+                <p>When you transitioned from screens to nature touch through sunlight at 3:00 PM, your stress markers dropped by 18%.</p>
+              </div>
+            </div>
+
+            <!-- Object -->
+            <div class="ins-card">
+              <div class="ins-card-header">
+                <div class="ins-card-top">
+                  <div class="ins-card-icon-wrap">
+                    <img src="assets/slide6/icon-object.svg" alt="" width="12" height="12" />
+                  </div>
+                  <span class="ins-card-name">Object</span>
+                </div>
+                <img src="assets/slide6/chevron-down.svg" alt="" class="ins-chevron" width="9" height="5" />
+              </div>
+            </div>
+
+            <!-- Nature -->
+            <div class="ins-card">
+              <div class="ins-card-header">
+                <div class="ins-card-top">
+                  <div class="ins-card-icon-wrap">
+                    <img src="assets/slide6/icon-nature.svg" alt="" width="16" height="16" />
+                  </div>
+                  <span class="ins-card-name">Nature</span>
+                </div>
+                <img src="assets/slide6/chevron-down.svg" alt="" class="ins-chevron" width="9" height="5" />
+              </div>
+            </div>
+
+            <!-- Pulse -->
+            <div class="ins-card">
+              <div class="ins-card-header">
+                <div class="ins-card-top">
+                  <div class="ins-card-icon-wrap">
+                    <img src="assets/slide6/icon-pulse.svg" alt="" width="16" height="16" />
+                  </div>
+                  <span class="ins-card-name">Pulse</span>
+                </div>
+                <img src="assets/slide6/chevron-down.svg" alt="" class="ins-chevron" width="9" height="5" />
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
     </div>
 
     <!-- Dot navigation -->
@@ -716,6 +836,7 @@
       <label for="s3" class="dot"></label>
       <label for="s4" class="dot"></label>
       <label for="s5" class="dot"></label>
+      <label for="s6" class="dot"></label>
     </div>
 
     <!-- Arrow navigation -->
@@ -738,15 +859,20 @@
 
       <!-- s5 active -->
       <label for="s4" class="arrow prev a5">&#10094;</label>
+      <label for="s6" class="arrow next a5">&#10095;</label>
+
+      <!-- s6 active -->
+      <label for="s5" class="arrow prev a6">&#10094;</label>
     </div>
 
     <!-- Slide counter -->
     <div class="counter">
-      <span class="counter-text c1">1 / 5</span>
-      <span class="counter-text c2">2 / 5</span>
-      <span class="counter-text c3">3 / 5</span>
-      <span class="counter-text c4">4 / 5</span>
-      <span class="counter-text c5">5 / 5</span>
+      <span class="counter-text c1">1 / 6</span>
+      <span class="counter-text c2">2 / 6</span>
+      <span class="counter-text c3">3 / 6</span>
+      <span class="counter-text c4">4 / 6</span>
+      <span class="counter-text c5">5 / 6</span>
+      <span class="counter-text c6">6 / 6</span>
     </div>
 
   </div>

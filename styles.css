@@ -57,21 +57,22 @@ html, body {
 /* ---------- Slide Track ---------- */
 .slides {
   display: flex;
-  width: 500%;            /* 5 slides */
+  width: 600%;            /* 6 slides */
   height: 100%;
   transition: transform var(--slide-transition);
 }
 
 /* Move track based on checked radio */
 #s1:checked ~ .slides { transform: translateX(0); }
-#s2:checked ~ .slides { transform: translateX(-20%); }
-#s3:checked ~ .slides { transform: translateX(-40%); }
-#s4:checked ~ .slides { transform: translateX(-60%); }
-#s5:checked ~ .slides { transform: translateX(-80%); }
+#s2:checked ~ .slides { transform: translateX(-16.6667%); }
+#s3:checked ~ .slides { transform: translateX(-33.3333%); }
+#s4:checked ~ .slides { transform: translateX(-50%); }
+#s5:checked ~ .slides { transform: translateX(-66.6667%); }
+#s6:checked ~ .slides { transform: translateX(-83.3333%); }
 
 /* ---------- Individual Slide ---------- */
 .slide {
-  width: 20%;             /* 100% / 5 slides */
+  width: calc(100% / 6);  /* 100% / 6 slides */
   height: 100%;
   display: flex;
   align-items: center;
@@ -276,7 +277,8 @@ html, body {
 #s2:checked ~ .dots .dot:nth-child(2),
 #s3:checked ~ .dots .dot:nth-child(3),
 #s4:checked ~ .dots .dot:nth-child(4),
-#s5:checked ~ .dots .dot:nth-child(5) {
+#s5:checked ~ .dots .dot:nth-child(5),
+#s6:checked ~ .dots .dot:nth-child(6) {
   background: var(--primary-l);
   transform: scale(1.3);
 }
@@ -326,6 +328,7 @@ html, body {
 #s3:checked ~ .arrows .a3 { display: flex; }
 #s4:checked ~ .arrows .a4 { display: flex; }
 #s5:checked ~ .arrows .a5 { display: flex; }
+#s6:checked ~ .arrows .a6 { display: flex; }
 
 /* ---------- Slide Counter ---------- */
 .counter {
@@ -347,7 +350,8 @@ html, body {
 #s2:checked ~ .counter .c2,
 #s3:checked ~ .counter .c3,
 #s4:checked ~ .counter .c4,
-#s5:checked ~ .counter .c5 {
+#s5:checked ~ .counter .c5,
+#s6:checked ~ .counter .c6 {
   display: inline;
 }
 
@@ -367,6 +371,9 @@ html, body {
 
 .slide-5::before { background: #fd79a8; }
 .slide-5::after  { background: #e84393; }
+
+.slide-6::before { background: #0984e3; }
+.slide-6::after  { background: #74b9ff; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 640px) {
@@ -1900,6 +1907,273 @@ html, body {
 /* ----- Touch Log page responsive ----- */
 @media (min-width: 641px) {
   .touchlog-page {
+    margin: 0 auto;
+  }
+}
+
+/* ============================================
+   SLIDE 6 — Touch Insight (Figma Design)
+   ============================================ */
+
+.slide.slide-6 {
+  background: #fff;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.slide-6::before,
+.slide-6::after { display: none; }
+
+.insight-page {
+  max-width: 430px;
+  width: 100%;
+  font-family: var(--fig-font);
+  animation: none;
+  padding: 0 24px 40px;
+  position: relative;
+}
+
+/* ----- Title ----- */
+.ins-title {
+  font-family: var(--fig-font);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.4;
+  color: #3d3830;
+  margin: 8px 0 16px;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: #3d3830;
+  background-clip: unset;
+}
+
+/* ----- Tab pills ----- */
+.ins-tabs {
+  background: #fdfcf8;
+  border-radius: 30px;
+  padding: 5px;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 24px;
+}
+
+.ins-tab {
+  flex: 1;
+  text-align: center;
+  padding: 5px 25px;
+  border-radius: 30px;
+  font-family: var(--fig-font);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: -0.132px;
+  color: #b5ad8e;
+  cursor: pointer;
+}
+
+.ins-tab.active {
+  background: #f0eadb;
+  color: #2a2620;
+}
+
+/* ----- Pie Chart ----- */
+.ins-chart {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  margin-bottom: 20px;
+}
+
+/* Wedge containers */
+.ins-wedge {
+  position: absolute;
+}
+
+.ins-wedge-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.ins-wedge-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Pulse — large left slice */
+.ins-wedge-pulse {
+  left: 10px;
+  top: 0;
+  width: 159px;
+  height: 319px;
+}
+
+/* Self-Sooth — top-right */
+.ins-wedge-sooth {
+  left: 173px;
+  top: 0;
+  width: 159px;
+  height: 152px;
+}
+
+/* Objects — right */
+.ins-wedge-objects {
+  left: 173px;
+  top: 154px;
+  width: 163px;
+  height: 96px;
+}
+
+/* Nature — bottom-right */
+.ins-wedge-nature {
+  left: 130px;
+  top: 200px;
+  width: 163px;
+  height: 132px;
+  transform: rotate(0deg);
+}
+
+/* Wedge labels */
+.ins-wedge-label {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ins-wedge-label.light .ins-pct {
+  color: #f0f8ff;
+}
+
+.ins-wedge-label.light .ins-cat {
+  color: #f0f8ff;
+}
+
+.ins-wedge-label.dark .ins-pct {
+  color: #3a6280;
+}
+
+.ins-wedge-label.dark .ins-cat {
+  color: #3a6280;
+}
+
+.ins-pct {
+  font-family: var(--fig-font);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.ins-cat {
+  font-family: var(--fig-font);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* Position labels inside wedges */
+.ins-wedge-pulse .ins-wedge-label {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ins-wedge-sooth .ins-wedge-label {
+  top: 45%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+.ins-wedge-objects .ins-wedge-label {
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.ins-wedge-nature .ins-wedge-label {
+  top: 55%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+/* ----- Insight Cards ----- */
+.ins-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ins-card {
+  background: #f7f6ee;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.ins-card.expanded {
+  background: #f0efe3;
+}
+
+.ins-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+}
+
+.ins-card-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ins-card.expanded .ins-card-header {
+  background: #f7f6ee;
+  border-radius: 16px;
+  padding: 18px 24px;
+}
+
+.ins-card-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ins-card-name {
+  font-family: var(--fig-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.176px;
+  color: #3a3525;
+}
+
+.ins-chevron {
+  opacity: 0.5;
+}
+
+.ins-card-body {
+  padding: 0 24px 18px;
+}
+
+.ins-card-body p {
+  font-family: var(--fig-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #000 !important;
+  margin: 0 !important;
+}
+
+/* ----- Insight page responsive ----- */
+@media (min-width: 641px) {
+  .insight-page {
     margin: 0 auto;
   }
 }
