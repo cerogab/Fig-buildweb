@@ -1129,6 +1129,94 @@ html, body {
   }
 }
 
+/* ----- Pair Popup (Slide 2) ----- */
+.pair-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 50;
+  align-items: center;
+  justify-content: center;
+}
+
+.pair-overlay.active {
+  display: flex;
+}
+
+.pair-popup {
+  background: #fff;
+  border-radius: 20px;
+  width: 267px;
+  padding: 32px 24px 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.pair-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.pair-title {
+  font-family: var(--fig-font);
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 1.5;
+  letter-spacing: -0.275px;
+  color: rgba(0, 0, 0, 0.8);
+  margin: 0 0 8px;
+}
+
+.pair-ring-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.pair-desc {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: -0.11px;
+  color: rgba(0, 0, 0, 0.8);
+  margin: 0 0 16px;
+}
+
+.pair-done-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-family: var(--fig-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+}
+
 /* ============================================
    SLIDE 3 — Control Centre (Figma Design)
    ============================================ */

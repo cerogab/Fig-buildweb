@@ -296,6 +296,20 @@
           </nav>
 
         </div>
+
+        <!-- Pair Popup -->
+        <div class="pair-overlay" id="pairOverlay">
+          <div class="pair-popup">
+            <button class="pair-close" id="pairClose" aria-label="Close">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15 5L5 15M5 5l10 10" stroke="rgba(0,0,0,0.5)" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </button>
+            <h2 class="pair-title">Pair Your Soothe Ring</h2>
+            <img src="assets/slide2/ring-pair.png" alt="Soothe Ring" class="pair-ring-img" />
+            <p class="pair-desc">This device is now cryptographically bound to your phone. Raw data never leaves your device—no cloud logs, no third-party access</p>
+            <button class="pair-done-btn" id="pairDone">Done</button>
+          </div>
+        </div>
+
       </div>
 
       <!-- Slide 3 — Control Centre (Figma) -->
@@ -876,6 +890,21 @@
       if (e.key === 'ArrowRight' && cur < radios.length - 1) radios[cur + 1].checked = true;
       if (e.key === 'ArrowLeft' && cur > 0) radios[cur - 1].checked = true;
     });
+
+    // Pair popup: show when slide 2 is selected
+    (function() {
+      var overlay = document.getElementById('pairOverlay');
+      var s2 = document.getElementById('s2');
+      var closeBtn = document.getElementById('pairClose');
+      var doneBtn = document.getElementById('pairDone');
+
+      function showPopup() { overlay.classList.add('active'); }
+      function hidePopup() { overlay.classList.remove('active'); }
+
+      s2.addEventListener('change', function() { if (s2.checked) showPopup(); });
+      closeBtn.addEventListener('click', hidePopup);
+      doneBtn.addEventListener('click', hidePopup);
+    })();
   </script>
 
 </body>
