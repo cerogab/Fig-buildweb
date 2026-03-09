@@ -1484,10 +1484,10 @@ html, body {
   font-weight: 700;
   font-size: 28px;
   line-height: 34px;
-  color: #C49A6C;
+  color: #888888;
   background: none;
   -webkit-background-clip: unset;
-  -webkit-text-fill-color: #C49A6C;
+  -webkit-text-fill-color: #888888;
   background-clip: unset;
 }
 
