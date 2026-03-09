@@ -867,5 +867,16 @@
 
   </div>
 
+  <script>
+    document.addEventListener('keydown', function(e) {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      var radios = document.querySelectorAll('input[name="slide"]');
+      var cur = 0;
+      radios.forEach(function(r, i) { if (r.checked) cur = i; });
+      if (e.key === 'ArrowRight' && cur < radios.length - 1) radios[cur + 1].checked = true;
+      if (e.key === 'ArrowLeft' && cur > 0) radios[cur - 1].checked = true;
+    });
+  </script>
+
 </body>
 </html>
