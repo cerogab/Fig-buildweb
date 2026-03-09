@@ -1417,3 +1417,149 @@ html, body {
     margin: 0 auto;
   }
 }
+
+/* ============================================
+   SLIDE 4 — Touch Sensitivity (Figma Design)
+   ============================================ */
+
+.slide.slide-4 {
+  background: #fff;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.slide-4::before,
+.slide-4::after { display: none; }
+
+.touch-pref-page {
+  max-width: 430px;
+  width: 100%;
+  font-family: var(--fig-font);
+  animation: none;
+  padding: 0 25px 100px;
+  position: relative;
+}
+
+/* ----- Header ----- */
+.tp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.tp-header-left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tp-back-btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #404040;
+  line-height: 1;
+}
+
+.tp-title {
+  font-family: var(--fig-font);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.4;
+  color: #000;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: #000;
+  background-clip: unset;
+}
+
+/* ----- Preferences Card ----- */
+.tp-card {
+  background: #fdfcf8;
+  border-radius: 25px;
+  padding: 30px 10px 30px 20px;
+}
+
+.tp-pref {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tp-pref + .tp-pref {
+  margin-top: 30px;
+}
+
+.tp-pref-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+  max-width: 100%;
+}
+
+.tp-pref-name {
+  font-family: var(--fig-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2a2620;
+  letter-spacing: -0.18px;
+}
+
+.tp-pref-desc {
+  font-family: var(--fig-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  color: #2a2620;
+  text-align: right;
+}
+
+/* Slider / pill toggle */
+.tp-slider {
+  background: #f0efe3;
+  border-radius: 30px;
+  padding: 5px;
+  display: flex;
+  gap: 5px;
+  width: 300px;
+  max-width: 100%;
+}
+
+.tp-option {
+  flex: 1;
+  text-align: center;
+  padding: 15px 10px;
+  border-radius: 25px;
+  font-family: var(--fig-font);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #8a8370;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.tp-option.selected {
+  background: #fff;
+  color: #2a2620;
+}
+
+/* ----- Touch Pref page responsive ----- */
+@media (min-width: 641px) {
+  .touch-pref-page {
+    margin: 0 auto;
+  }
+}
